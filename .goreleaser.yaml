@@ -219,7 +219,7 @@ changelog:
     - "^test:"
 release:
   github:
-    owner: DappsterOS
+    owner: dappster-io
     name: DappsterOS-AppManagement
   draft: true
   prerelease: auto
