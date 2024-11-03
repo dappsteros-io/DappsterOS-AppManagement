@@ -6,9 +6,9 @@ const (
 
 	AppsDirectoryName = "Apps"
 
-	ComposeAppAuthorCasaOSTeam = "CasaOS Team"
+	ComposeAppAuthorDappsterOSTeam = "DappsterOS Team"
 
-	ComposeExtensionNameXCasaOS                = "x-dappsteros"
+	ComposeExtensionNameXDappsterOS            = "x-dappsteros"
 	ComposeExtensionPropertyNameStoreAppID     = "store_app_id"
 	ComposeExtensionPropertyNameTitle          = "title"
 	ComposeExtensionPropertyNameIsUncontrolled = "is_uncontrolled"

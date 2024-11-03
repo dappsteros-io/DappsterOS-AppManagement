@@ -34,7 +34,7 @@ var (
 	// Global is a map to inject environment variables to the app.
 	Global = make(map[string]string)
 
-	CasaOSGlobalVariables = &model.CasaOSGlobalVariables{}
+	DappsterOSGlobalVariables = &model.DappsterOSGlobalVariables{}
 
 	Cfg               *ini.File
 	ConfigFilePath    string

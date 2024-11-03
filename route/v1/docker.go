@@ -684,7 +684,7 @@ func pullAndInstall(ctx context.Context, imageName string, m *model.Customizatio
 		return err
 	}
 
-	config.CasaOSGlobalVariables.AppChange = true
+	config.DappsterOSGlobalVariables.AppChange = true
 	return nil
 }
 
@@ -755,7 +755,7 @@ func uninstall(ctx context.Context, container *types.ContainerJSON, isDelete boo
 			}
 		}
 	}
-	config.CasaOSGlobalVariables.AppChange = true
+	config.DappsterOSGlobalVariables.AppChange = true
 
 	return nil
 }

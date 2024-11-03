@@ -1,7 +1,7 @@
 [Unit]
 After=dappsteros-message-bus.service
 After=docker.service
-Description=CasaOS App Management Service
+Description=DappsterOS App Management Service
 
 [Service]
 ExecStartPre=/usr/bin/dappsteros-app-management -v

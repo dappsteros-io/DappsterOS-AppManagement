@@ -46,7 +46,7 @@ func (u *migrationTool044AndOlder) IsMigrationNeeded() (bool, error) {
 
 	for _, v := range replaceUrl {
 		if strings.Contains(string(content), v.OldUrl) {
-			_logger.Info("Migration is needed for a CasaOS with old app store link.")
+			_logger.Info("Migration is needed for a DappsterOS with old app store link.")
 			return true, nil
 		}
 	}

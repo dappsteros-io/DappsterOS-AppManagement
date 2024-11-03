@@ -15,6 +15,9 @@ import (
 
 	v1 "github.com/dappster-io/DappsterOS-AppManagement/service/v1"
 
+	"github.com/compose-spec/compose-go/cli"
+	"github.com/compose-spec/compose-go/loader"
+	"github.com/compose-spec/compose-go/types"
 	"github.com/dappster-io/DappsterOS-AppManagement/codegen"
 	"github.com/dappster-io/DappsterOS-AppManagement/common"
 	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
@@ -25,9 +28,6 @@ import (
 	"github.com/dappster-io/DappsterOS-Common/utils/logger"
 	"github.com/dappster-io/DappsterOS-Common/utils/port"
 	"github.com/dappster-io/DappsterOS-Common/utils/random"
-	"github.com/compose-spec/compose-go/cli"
-	"github.com/compose-spec/compose-go/loader"
-	"github.com/compose-spec/compose-go/types"
 	composeCmd "github.com/docker/compose/v2/cmd/compose"
 
 	"github.com/docker/compose/v2/cmd/formatter"
@@ -41,9 +41,9 @@ import (
 type ComposeApp codegen.ComposeApp
 
 func (a *ComposeApp) StoreInfo(includeApps bool) (*codegen.ComposeAppStoreInfo, error) {
-	ex, ok := a.Extensions[common.ComposeExtensionNameXCasaOS]
+	ex, ok := a.Extensions[common.ComposeExtensionNameXDappsterOS]
 	if !ok {
-		return nil, ErrComposeExtensionNameXCasaOSNotFound
+		return nil, ErrComposeExtensionNameXDappsterOSNotFound
 	}
 
 	var storeInfo codegen.ComposeAppStoreInfo
@@ -53,7 +53,7 @@ func (a *ComposeApp) StoreInfo(includeApps bool) (*codegen.ComposeAppStoreInfo, 
 	}
 
 	// TODO refactor this with ComposeAppWithStoreInfo
-	isUncontrolled, ok := a.Extensions[common.ComposeExtensionNameXCasaOS].(map[string]interface{})[common.ComposeExtensionPropertyNameIsUncontrolled].(bool)
+	isUncontrolled, ok := a.Extensions[common.ComposeExtensionNameXDappsterOS].(map[string]interface{})[common.ComposeExtensionPropertyNameIsUncontrolled].(bool)
 	if ok {
 		storeInfo.IsUncontrolled = &isUncontrolled
 	}
@@ -77,7 +77,7 @@ func (a *ComposeApp) StoreInfo(includeApps bool) (*codegen.ComposeAppStoreInfo, 
 		for _, app := range a.Apps() {
 			appStoreInfo, err := app.StoreInfo()
 			if err != nil {
-				if err == ErrComposeExtensionNameXCasaOSNotFound {
+				if err == ErrComposeExtensionNameXDappsterOSNotFound {
 					logger.Info("App does not have x-dappsteros extension - skipping", zap.String("app", app.Name))
 					continue
 				}
@@ -102,8 +102,8 @@ func (a *ComposeApp) AuthorType() codegen.StoreAppAuthorType {
 	if strings.EqualFold(storeInfo.Author, storeInfo.Developer) {
 		return codegen.Official
 	}
-	if strings.EqualFold(storeInfo.Author, common.ComposeAppAuthorCasaOSTeam) {
-		return codegen.ByCasaos
+	if strings.EqualFold(storeInfo.Author, common.ComposeAppAuthorDappsterOSTeam) {
+		return codegen.ByDappsteros
 	}
 
 	return codegen.Community
@@ -111,15 +111,15 @@ func (a *ComposeApp) AuthorType() codegen.StoreAppAuthorType {
 
 func (a *ComposeApp) SetStoreAppID(storeAppID string) (string, bool) {
 	// set store_app_id (by convention is the same as app name at install time if it does not exist)
-	extension, ok := a.Extensions[common.ComposeExtensionNameXCasaOS]
+	extension, ok := a.Extensions[common.ComposeExtensionNameXDappsterOS]
 	if !ok {
-		logger.Info("compose app does not have x-dappsteros extension - might not be a compose app for CasaOS", zap.String("app", a.Name))
+		logger.Info("compose app does not have x-dappsteros extension - might not be a compose app for DappsterOS", zap.String("app", a.Name))
 		return "", false
 	}
 
 	composeAppStoreInfo, ok := extension.(map[string]interface{})
 	if !ok {
-		logger.Info("compose app does not have valid x-dappsteros extension - might not be a compose app for CasaOS", zap.String("app", a.Name))
+		logger.Info("compose app does not have valid x-dappsteros extension - might not be a compose app for DappsterOS", zap.String("app", a.Name))
 		return "", false
 	}
 
@@ -141,15 +141,15 @@ func (a *ComposeApp) SetTitle(title, lang string) {
 		a.Extensions = make(map[string]interface{})
 	}
 
-	extension, ok := a.Extensions[common.ComposeExtensionNameXCasaOS]
+	extension, ok := a.Extensions[common.ComposeExtensionNameXDappsterOS]
 	if !ok {
 		extension = map[string]interface{}{}
-		a.Extensions[common.ComposeExtensionNameXCasaOS] = extension
+		a.Extensions[common.ComposeExtensionNameXDappsterOS] = extension
 	}
 
 	composeAppStoreInfo, ok := extension.(map[string]interface{})
 	if !ok {
-		logger.Info("compose app does not have valid x-dappsteros extension - might not be a compose app for CasaOS", zap.String("app", a.Name))
+		logger.Info("compose app does not have valid x-dappsteros extension - might not be a compose app for DappsterOS", zap.String("app", a.Name))
 		return
 	}
 
@@ -159,7 +159,7 @@ func (a *ComposeApp) SetTitle(title, lang string) {
 
 	titleMap, ok := composeAppStoreInfo[common.ComposeExtensionPropertyNameTitle].(map[string]string)
 	if !ok {
-		logger.Info("compose app does not have valid title map in its x-dappsteros extension - might not be a compose app for CasaOS", zap.String("app", a.Name))
+		logger.Info("compose app does not have valid title map in its x-dappsteros extension - might not be a compose app for DappsterOS", zap.String("app", a.Name))
 		return
 	}
 
@@ -924,16 +924,16 @@ func LoadComposeAppFromConfigFile(appID string, configFile string) (*ComposeApp,
 	return (*ComposeApp)(project), err
 }
 
-var gpuCache *([]external.GPUInfo) = nil
+var gpuCache *([]external.NvidiaGPUInfo) = nil
 
 func removeRuntime(a *ComposeApp) {
 	if config.RemoveRuntimeIfNoNvidiaGPUFlag {
 
 		// if gpuCache is nil, it means it is first time fetching gpu info
 		if gpuCache == nil {
-			value, err := external.GPUInfoList()
+			value, err := external.NvidiaGPUInfoList()
 			if err != nil {
-				gpuCache = &([]external.GPUInfo{})
+				gpuCache = &([]external.NvidiaGPUInfo{})
 			} else {
 				gpuCache = &value
 			}
@@ -1058,16 +1058,16 @@ func getNameFrom(composeYAML []byte) string {
 }
 
 func (a *ComposeApp) SetUncontrolled(uncontrolled bool) error {
-	xCasaos := a.Extensions[common.ComposeExtensionNameXCasaOS]
+	xCasaos := a.Extensions[common.ComposeExtensionNameXDappsterOS]
 	xCasaosMap, ok := xCasaos.(map[string]interface{})
 
 	// set to controlled app
 	if !ok {
 		logger.Error("failed to get map compose app extensions", zap.String("composeAppID", a.Name))
-		return ErrComposeExtensionNameXCasaOSNotFound
+		return ErrComposeExtensionNameXDappsterOSNotFound
 	} else {
 		xCasaosMap[common.ComposeExtensionPropertyNameIsUncontrolled] = uncontrolled
-		a.Extensions[common.ComposeExtensionNameXCasaOS] = xCasaosMap
+		a.Extensions[common.ComposeExtensionNameXDappsterOS] = xCasaosMap
 	}
 
 	return nil

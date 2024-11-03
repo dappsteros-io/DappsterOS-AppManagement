@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/compose-spec/compose-go/types"
 	"github.com/dappster-io/DappsterOS-AppManagement/codegen"
 	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/compose-spec/compose-go/types"
 	"github.com/samber/lo"
 )
 
@@ -118,11 +118,11 @@ func (c *CustomizationPostData) AppStoreInfo() codegen.AppStoreInfo {
 func (c *CustomizationPostData) ComposeAppStoreInfo() codegen.ComposeAppStoreInfo {
 	name := strings.ToLower(c.ContainerName)
 
-	message := "This is a compose app converted from a legacy app (CasaOS v0.4.3 or earlier)"
+	message := "This is a compose app converted from a legacy app (DappsterOS v0.4.3 or earlier)"
 
 	return codegen.ComposeAppStoreInfo{
 		Architectures: &[]string{runtime.GOARCH},
-		Author:        "CasaOS User",
+		Author:        "DappsterOS User",
 		Category:      "unknown",
 		Description:   map[string]string{common.DefaultLanguage: c.Description},
 		Developer:     "unknown",
@@ -154,7 +154,7 @@ func (c *CustomizationPostData) Services() types.Services {
 			Volumes:     c.Volumes.ServiceVolumeConfigList(),
 
 			Extensions: map[string]interface{}{
-				common.ComposeExtensionNameXCasaOS: c.AppStoreInfo(),
+				common.ComposeExtensionNameXDappsterOS: c.AppStoreInfo(),
 			},
 		},
 	}
@@ -165,7 +165,7 @@ func (c *CustomizationPostData) Compose() codegen.ComposeApp {
 		Name:     strings.ToLower(c.ContainerName),
 		Services: c.Services(),
 		Extensions: map[string]interface{}{
-			common.ComposeExtensionNameXCasaOS: c.ComposeAppStoreInfo(),
+			common.ComposeExtensionNameXDappsterOS: c.ComposeAppStoreInfo(),
 		},
 	}
 }

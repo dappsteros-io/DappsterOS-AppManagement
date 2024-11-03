@@ -2,7 +2,7 @@
  *@Date: 2022-05-16 17:37:08
  *@LastEditors: LinkLeong
  *@LastEditTime: 2022-07-13 10:46:38
- *@FilePath: /CasaOS/model/category.go
+ *@FilePath: /DappsterOS/model/category.go
  *@Description:
  */
 package model

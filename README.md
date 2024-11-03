@@ -10,4 +10,4 @@
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=DappsterOS_DappsterOS-AppManagement&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=DappsterOS_DappsterOS-AppManagement)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=DappsterOS_DappsterOS-AppManagement&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=DappsterOS_DappsterOS-AppManagement)
 
-App management service manages CasaOS apps lifecycle, such as installation, running, etc.
+App management service manages DappsterOS apps lifecycle, such as installation, running, etc.

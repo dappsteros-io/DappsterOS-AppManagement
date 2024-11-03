@@ -14,6 +14,7 @@ import (
 	"path/filepath"
 	"time"
 
+	"github.com/coreos/go-systemd/daemon"
 	"github.com/dappster-io/DappsterOS-AppManagement/common"
 	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
 	"github.com/dappster-io/DappsterOS-AppManagement/route"
@@ -21,7 +22,6 @@ import (
 	"github.com/dappster-io/DappsterOS-Common/model"
 	"github.com/dappster-io/DappsterOS-Common/utils/file"
 	"github.com/dappster-io/DappsterOS-Common/utils/logger"
-	"github.com/coreos/go-systemd/daemon"
 	"github.com/robfig/cron/v3"
 	"go.uber.org/zap"
 

@@ -1,18 +1,18 @@
 openapi: 3.0.3
 
 info:
-  title: CasaOS App Management API
+  title: DappsterOS App Management API
   version: v1
   description: |
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dappster-io/logo/main/dappsteros/dappsteros_banner_dark_night_800px.png">
         <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dappster-io/logo/main/dappsteros/dappsteros_banner_twilight_blue_800px.png">
-        <img alt="CasaOS" src="https://raw.githubusercontent.com/dappster-io/logo/main/dappsteros/dappsteros_banner_twilight_blue_800px.png">
+        <img alt="DappsterOS" src="https://raw.githubusercontent.com/dappster-io/logo/main/dappsteros/dappsteros_banner_twilight_blue_800px.png">
     </picture>
 
-    CasaOS App Management manages app lifecycle, including installing, uninstalling, starting, stopping, setting, etc.
+    DappsterOS App Management manages app lifecycle, including installing, uninstalling, starting, stopping, setting, etc.
 
-    For issues and discussions, please visit the [GitHub repository](https://github.com/dappster-io/CasaOS) or join [our Discord](https://discord.gg/knqAbbBbeX).
+    For issues and discussions, please visit the [GitHub repository](https://github.com/dappster-io/DappsterOS) or join [our Discord](https://discord.gg/knqAbbBbeX).
 
 servers:
 - url: /v1/container
@@ -299,7 +299,7 @@ components:
           example: "https://raw.githubusercontent.com/dappster-io/logo/main/dappsteros/dappsteros_logo_64px.png"
         title:
           type: string
-          example: "CasaOS"
+          example: "DappsterOS"
         data:
           type: object
         previous:
@@ -421,7 +421,7 @@ components:
           example: "dappsteros"
         description:
           type: string
-          example: "CasaOS"
+          example: "DappsterOS"
         position:
           type: boolean
           example: true

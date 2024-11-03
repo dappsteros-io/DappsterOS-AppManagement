@@ -97,7 +97,7 @@ x-dappsteros:
     - amd64
     - arm64
   main: sonarr
-  author: CasaOS Team
+  author: DappsterOS Team
   category: Media
   description:
     en_us: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
@@ -160,7 +160,7 @@ x-dappsteros:
   architectures:
     - amd64
   main: swingmusic
-  author: CasaOS Team
+  author: DappsterOS Team
   category: Media
   description:
     en_us: |
@@ -258,7 +258,7 @@ x-dappsteros:
     - amd64
     - arm64
   main: sonarr
-  author: CasaOS Team
+  author: DappsterOS Team
   category: Media
   description:
     en_us: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
