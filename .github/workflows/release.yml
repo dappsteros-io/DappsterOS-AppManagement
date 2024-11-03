@@ -1,0 +1,20 @@
+name: goreleaser
+
+on:
+  push:
+    tags:
+    - v*.*.*
+env:
+  dappsteros_cache_version: 1.1 # the value define by causal. the field for to clear the GitHub Action cache
+
+permissions:
+  contents: write
+jobs:
+  call-workflow-passing-data:
+    uses: dappster-io/github/.github/workflows/go_release.yml@main
+    with:
+      project-name: DappsterOS-AppManagement
+      file-name: dappsteros-app-management
+    secrets:
+      OSS_KEY_ID: ${{ secrets.OSS_KEY_ID }}
+      OSS_KEY_SECRET: ${{ secrets.OSS_KEY_SECRET }}

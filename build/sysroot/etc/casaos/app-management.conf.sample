@@ -1,0 +1,13 @@
+[common]
+RuntimePath = /var/run/dappsteros
+
+[app]
+LogPath = /var/log/dappsteros/
+LogSaveName = app-management
+LogFileExt = log
+AppStorePath = /var/lib/dappsteros/appstore
+AppsPath = /var/lib/dappsteros/apps
+
+[server]
+appstore = https://dappsteros.app/store/main.zip
+appstore = https://github.com/bigbeartechworld/big-bear-dappsteros/archive/refs/heads/master.zip
