@@ -486,9 +486,9 @@ func MyAppList(ctx echo.Context) error {
 	image := ctx.QueryParam("image")
 	state := ctx.QueryParam("state")
 
-	casaOSApps, localApps := service.MyService.Docker().GetContainerAppList(&name, &image, &state)
+	dappsterOSApps, localApps := service.MyService.Docker().GetContainerAppList(&name, &image, &state)
 	data := make(map[string]interface{}, 2)
-	data["dappsteros_apps"] = casaOSApps
+	data["dappsteros_apps"] = dappsterOSApps
 	data["local_apps"] = localApps
 
 	return ctx.JSON(common_err.SUCCESS, &modelCommon.Result{Success: common_err.SUCCESS, Message: common_err.GetMsg(common_err.SUCCESS), Data: data})
