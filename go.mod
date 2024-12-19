@@ -221,7 +221,7 @@ require (
 require (
 	github.com/compose-spec/compose-go v1.20.2
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf
-	github.com/dappsteros-io/DappsterOS-Common v0.4.9-alpha12
+	github.com/dappsteros-io/DappsterOS-Common v0.4.11
 	github.com/docker/cli v24.0.7+incompatible
 	github.com/docker/docker v24.0.7+incompatible
 	github.com/gorilla/websocket v1.5.0
