@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/codegen"
-	"github.com/dappster-io/DappsterOS-AppManagement/model"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/codegen"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/model"
 	"github.com/labstack/echo/v4"
 	"gopkg.in/yaml.v3"
 )

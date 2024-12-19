@@ -6,11 +6,11 @@ import (
 	"gotest.tools/v3/assert"
 
 	"github.com/compose-spec/compose-go/types"
-	"github.com/dappster-io/DappsterOS-AppManagement/codegen"
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	v2 "github.com/dappster-io/DappsterOS-AppManagement/route/v2"
-	"github.com/dappster-io/DappsterOS-AppManagement/service"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/codegen"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	v2 "github.com/dappsteros-io/DappsterOS-AppManagement/route/v2"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/service"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 )
 
 func TestFilterCatalogByCategory(t *testing.T) {

@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/dappster-io/DappsterOS-AppManagement/codegen/message_bus"
-	"github.com/dappster-io/DappsterOS-Common/utils"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/codegen/message_bus"
+	"github.com/dappsteros-io/DappsterOS-Common/utils"
 )
 
 // common properties

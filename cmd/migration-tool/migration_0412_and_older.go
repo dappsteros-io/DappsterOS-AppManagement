@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
-	interfaces "github.com/dappster-io/DappsterOS-Common"
+	interfaces "github.com/dappsteros-io/DappsterOS-Common"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/config"
 )
 
 type migrationTool0412AndOlder struct{}

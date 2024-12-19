@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/codegen"
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
-	"github.com/dappster-io/DappsterOS-AppManagement/service"
-	"github.com/dappster-io/DappsterOS-Common/utils"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/codegen"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/config"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/service"
+	"github.com/dappsteros-io/DappsterOS-Common/utils"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 	"go.uber.org/zap"
 
 	"github.com/labstack/echo/v4"

@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/docker"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/docker"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/filters"
 	client2 "github.com/docker/docker/client"

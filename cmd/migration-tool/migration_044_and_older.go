@@ -5,9 +5,9 @@ import (
 	"os"
 	"strings"
 
-	interfaces "github.com/dappster-io/DappsterOS-Common"
+	interfaces "github.com/dappsteros-io/DappsterOS-Common"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/config"
 )
 
 type UrlReplacement struct {
@@ -17,11 +17,11 @@ type UrlReplacement struct {
 
 var replaceUrl = []UrlReplacement{
 	{
-		OldUrl: "https://github.com/dappster-io/_appstore/archive/refs/heads/main.zip",
+		OldUrl: "https://github.com/dappsteros-io/_appstore/archive/refs/heads/main.zip",
 		NewUrl: "https://dappsteros.app/store/main.zip",
 	},
 	{
-		OldUrl: "https://dappsteros.oss-cn-shanghai.aliyuncs.com/dappster-io/_appstore/archive/refs/heads/main.zip",
+		OldUrl: "https://dappsteros.oss-cn-shanghai.aliyuncs.com/dappsteros-io/_appstore/archive/refs/heads/main.zip",
 		NewUrl: "https://dappsteros.oss-cn-shanghai.aliyuncs.com/store/main.zip",
 	},
 }
@@ -59,7 +59,7 @@ func (u *migrationTool044AndOlder) PreMigrate() error {
 
 func (u *migrationTool044AndOlder) Migrate() error {
 	// replace string in AppManagementConfigFilePath
-	// replace https://github.com/dappster-io/_appstore/archive/refs/heads/main.zip to https://dappsteros-appstore.github.io/dappsteros-appstore/linux-all-appstore.zip
+	// replace https://github.com/dappsteros-io/_appstore/archive/refs/heads/main.zip to https://dappsteros-appstore.github.io/dappsteros-appstore/linux-all-appstore.zip
 	file, err := os.OpenFile(config.AppManagementConfigFilePath, os.O_RDWR, 0644)
 	if err != nil {
 		_logger.Error("failed to open app management config file: %s", err)

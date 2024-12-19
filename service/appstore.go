@@ -11,12 +11,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/codegen"
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/utils/downloadHelper"
-	"github.com/dappster-io/DappsterOS-Common/utils/file"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/codegen"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/config"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/utils/downloadHelper"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/file"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 	"github.com/samber/lo"
 	"go.uber.org/zap"
 )

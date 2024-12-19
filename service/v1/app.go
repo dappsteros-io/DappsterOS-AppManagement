@@ -8,9 +8,9 @@ import (
 	uuid "github.com/satori/go.uuid"
 	"go.uber.org/zap"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/model"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/model"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 )
 
 const (

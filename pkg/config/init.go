@@ -8,9 +8,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/model"
-	"github.com/dappster-io/DappsterOS-Common/utils/constants"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/model"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/constants"
 	"gopkg.in/ini.v1"
 )
 

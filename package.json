@@ -9,7 +9,7 @@
     "generate:ts": "npx openapi-typescript-codegen --input ./api/app_management/openapi.yaml --output ./generate",
     "start": "yarn generate:local && yarn build"
   },
-  "homepage": "https://github.com/dappster-io/DappsterOS-AppManagement#readme",
+  "homepage": "https://github.com/dappsteros-io/DappsterOS-AppManagement#readme",
   "description": "Casaos-AppManagement Typescript+Axios SDK",
   "keywords": [
     "DappsterOS-AppManagement",

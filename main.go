@@ -1,5 +1,5 @@
 //go:generate bash -c "mkdir -p codegen && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,server,spec -package codegen api/app_management/openapi.yaml > codegen/app_management_api.go"
-//go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,client -package message_bus https://raw.githubusercontent.com/dappster-io/DappsterOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
+//go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,client -package message_bus https://raw.githubusercontent.com/dappsteros-io/DappsterOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
 
 package main
 
@@ -15,17 +15,17 @@ import (
 	"time"
 
 	"github.com/coreos/go-systemd/daemon"
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
-	"github.com/dappster-io/DappsterOS-AppManagement/route"
-	"github.com/dappster-io/DappsterOS-AppManagement/service"
-	"github.com/dappster-io/DappsterOS-Common/model"
-	"github.com/dappster-io/DappsterOS-Common/utils/file"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/config"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/route"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/service"
+	"github.com/dappsteros-io/DappsterOS-Common/model"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/file"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 	"github.com/robfig/cron/v3"
 	"go.uber.org/zap"
 
-	util_http "github.com/dappster-io/DappsterOS-Common/utils/http"
+	util_http "github.com/dappsteros-io/DappsterOS-Common/utils/http"
 )
 
 var (

@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/dappster-io/DappsterOS-Common/utils"
+	"github.com/dappsteros-io/DappsterOS-Common/utils"
 	"gopkg.in/yaml.v3"
 )
 

@@ -3,7 +3,7 @@ package docker_test
 import (
 	"testing"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/docker"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/docker"
 	"gotest.tools/v3/assert"
 )
 

@@ -6,11 +6,11 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
-	"github.com/dappster-io/DappsterOS-Common/utils/file"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
-	timeutils "github.com/dappster-io/DappsterOS-Common/utils/time"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/config"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/file"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
+	timeutils "github.com/dappsteros-io/DappsterOS-Common/utils/time"
 	"gopkg.in/yaml.v3"
 
 	"github.com/docker/cli/cli/command"

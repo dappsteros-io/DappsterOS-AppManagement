@@ -7,13 +7,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/codegen"
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/docker"
-	"github.com/dappster-io/DappsterOS-AppManagement/service"
-	"github.com/dappster-io/DappsterOS-Common/utils/file"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/codegen"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/config"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/docker"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/service"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/file"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 	"go.uber.org/goleak"
 	"golang.org/x/net/context"
 	"gopkg.in/yaml.v3"
@@ -61,7 +61,7 @@ func TestAppStoreList(t *testing.T) {
 
 	ctx = common.WithProperties(ctx, map[string]string{})
 
-	expectAppStoreURL := strings.ToLower("https://github.com/dappster-io/_appstore/archive/refs/heads/main.zip")
+	expectAppStoreURL := strings.ToLower("https://github.com/dappsteros-io/_appstore/archive/refs/heads/main.zip")
 
 	ch := make(chan *codegen.AppStoreMetadata)
 

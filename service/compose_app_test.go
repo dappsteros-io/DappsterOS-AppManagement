@@ -5,10 +5,10 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/docker"
-	"github.com/dappster-io/DappsterOS-AppManagement/service"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/docker"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/service"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 	"go.uber.org/goleak"
 	"gotest.tools/v3/assert"
 )

@@ -9,12 +9,12 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/docker"
-	"github.com/dappster-io/DappsterOS-AppManagement/service"
-	"github.com/dappster-io/DappsterOS-Common/utils/file"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/config"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/docker"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/service"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/file"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 	"github.com/samber/lo"
 	"go.uber.org/goleak"
 	"gotest.tools/v3/assert"
@@ -37,7 +37,7 @@ func TestGetComposeApp(t *testing.T) {
 
 	config.AppInfo.AppStorePath = appStorePath
 
-	appStore, err := service.AppStoreByURL("https://github.com/dappster-io/_appstore/archive/refs/heads/main.zip")
+	appStore, err := service.AppStoreByURL("https://github.com/dappsteros-io/_appstore/archive/refs/heads/main.zip")
 	assert.NilError(t, err)
 
 	err = appStore.UpdateCatalog()
@@ -69,7 +69,7 @@ func TestGetApp(t *testing.T) {
 
 	config.AppInfo.AppStorePath = appStorePath
 
-	appStore, err := service.AppStoreByURL("https://github.com/dappster-io/_appstore/archive/refs/heads/main.zip")
+	appStore, err := service.AppStoreByURL("https://github.com/dappsteros-io/_appstore/archive/refs/heads/main.zip")
 	assert.NilError(t, err)
 
 	err = appStore.UpdateCatalog()
@@ -156,7 +156,7 @@ func TestWorkDir(t *testing.T) {
 
 	// test for github
 	hostname := "github.com"
-	path := "/dappster-io/DappsterOS-tore/archive/refs/heads/main.zip"
+	path := "/dappsteros-io/DappsterOS-tore/archive/refs/heads/main.zip"
 	appStore, err = service.AppStoreByURL("https://" + hostname + path)
 	assert.NilError(t, err)
 

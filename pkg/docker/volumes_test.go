@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/docker"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/docker"
 )
 
 func TestGetDir(t *testing.T) {

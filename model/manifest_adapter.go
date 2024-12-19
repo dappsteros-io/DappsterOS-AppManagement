@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/compose-spec/compose-go/types"
-	"github.com/dappster-io/DappsterOS-AppManagement/codegen"
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/codegen"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
 	"github.com/samber/lo"
 )
 

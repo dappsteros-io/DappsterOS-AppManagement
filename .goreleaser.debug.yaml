@@ -28,7 +28,7 @@ builds:
   - amd64
   hooks:
     post:
-    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappster-io/DappsterOS-AppManagement/cmd/appfile2compose
+    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappsteros-io/DappsterOS-AppManagement/cmd/appfile2compose
       output: true
 - id: dappsteros-app-management-arm64
   binary: build/sysroot/usr/bin/dappsteros-app-management
@@ -50,7 +50,7 @@ builds:
   - arm64
   hooks:
     post:
-    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappster-io/DappsterOS-AppManagement/cmd/appfile2compose
+    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappsteros-io/DappsterOS-AppManagement/cmd/appfile2compose
       output: true
 - id: dappsteros-app-management-arm-7
   binary: build/sysroot/usr/bin/dappsteros-app-management
@@ -74,7 +74,7 @@ builds:
   - "7"
   hooks:
     post:
-    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappster-io/DappsterOS-AppManagement/cmd/appfile2compose
+    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappsteros-io/DappsterOS-AppManagement/cmd/appfile2compose
       output: true
 - id: dappsteros-app-management-migration-tool-amd64
   binary: build/sysroot/usr/bin/dappsteros-app-management-migration-tool

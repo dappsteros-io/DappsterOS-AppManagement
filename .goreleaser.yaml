@@ -13,7 +13,7 @@ builds:
   binary: build/sysroot/usr/bin/dappsteros-app-management
   hooks:
     post:
-    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappster-io/DappsterOS-AppManagement/cmd/appfile2compose
+    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappsteros-io/DappsterOS-AppManagement/cmd/appfile2compose
       output: true
     - cmd: upx --best --lzma -v --no-progress build/sysroot/usr/bin/appfile2compose
       output: true
@@ -39,7 +39,7 @@ builds:
   binary: build/sysroot/usr/bin/dappsteros-app-management
   hooks:
     post:
-    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappster-io/DappsterOS-AppManagement/cmd/appfile2compose
+    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappsteros-io/DappsterOS-AppManagement/cmd/appfile2compose
       output: true
       # - cmd: upx --best --lzma -v --no-progress build/sysroot/usr/bin/appfile2compose
       #   output: true
@@ -65,7 +65,7 @@ builds:
   binary: build/sysroot/usr/bin/dappsteros-app-management
   hooks:
     post:
-    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappster-io/DappsterOS-AppManagement/cmd/appfile2compose
+    - cmd: go build -v -tags 'musl netgo osusergo' -o build/sysroot/usr/bin/appfile2compose github.com/dappsteros-io/DappsterOS-AppManagement/cmd/appfile2compose
       output: true
     - cmd: upx --best --lzma -v --no-progress build/sysroot/usr/bin/appfile2compose
       output: true
@@ -219,7 +219,7 @@ changelog:
     - "^test:"
 release:
   github:
-    owner: dappster-io
+    owner: dappsteros-io
     name: DappsterOS-AppManagement
   draft: true
   prerelease: auto

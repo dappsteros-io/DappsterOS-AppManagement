@@ -6,8 +6,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/docker"
-	"github.com/dappster-io/DappsterOS-Common/utils/random"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/docker"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/random"
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/api/types/network"

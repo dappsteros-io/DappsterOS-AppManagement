@@ -7,12 +7,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/codegen"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/codegen"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/config"
 
-	v2Route "github.com/dappster-io/DappsterOS-AppManagement/route/v2"
-	"github.com/dappster-io/DappsterOS-Common/external"
-	"github.com/dappster-io/DappsterOS-Common/utils/jwt"
+	v2Route "github.com/dappsteros-io/DappsterOS-AppManagement/route/v2"
+	"github.com/dappsteros-io/DappsterOS-Common/external"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/jwt"
 	"github.com/deepmap/oapi-codegen/pkg/middleware"
 	"github.com/getkin/kin-openapi/openapi3"
 	"github.com/getkin/kin-openapi/openapi3filter"

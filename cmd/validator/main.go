@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/cmd/validator/pkg"
-	"github.com/dappster-io/DappsterOS-Common/utils/file"
-	utils_logger "github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/cmd/validator/pkg"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/file"
+	utils_logger "github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 )
 
 var logger = NewLogger()

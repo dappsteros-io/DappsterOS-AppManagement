@@ -5,14 +5,14 @@ info:
   version: v1
   description: |
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dappster-io/logo/main/dappsteros/dappsteros_banner_dark_night_800px.png">
-        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dappster-io/logo/main/dappsteros/dappsteros_banner_twilight_blue_800px.png">
-        <img alt="DappsterOS" src="https://raw.githubusercontent.com/dappster-io/logo/main/dappsteros/dappsteros_banner_twilight_blue_800px.png">
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dappsteros-io/logo/main/dappsteros/dappsteros_banner_dark_night_800px.png">
+        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dappsteros-io/logo/main/dappsteros/dappsteros_banner_twilight_blue_800px.png">
+        <img alt="DappsterOS" src="https://raw.githubusercontent.com/dappsteros-io/logo/main/dappsteros/dappsteros_banner_twilight_blue_800px.png">
     </picture>
 
     DappsterOS App Management manages app lifecycle, including installing, uninstalling, starting, stopping, setting, etc.
 
-    For issues and discussions, please visit the [GitHub repository](https://github.com/dappster-io/DappsterOS) or join [our Discord](https://discord.gg/knqAbbBbeX).
+    For issues and discussions, please visit the [GitHub repository](https://github.com/dappsteros-io/DappsterOS) or join [our Discord](https://discord.gg/knqAbbBbeX).
 
 servers:
 - url: /v1/container
@@ -296,7 +296,7 @@ components:
       properties:
         icon:
           type: string
-          example: "https://raw.githubusercontent.com/dappster-io/logo/main/dappsteros/dappsteros_logo_64px.png"
+          example: "https://raw.githubusercontent.com/dappsteros-io/logo/main/dappsteros/dappsteros_logo_64px.png"
         title:
           type: string
           example: "DappsterOS"
@@ -381,7 +381,7 @@ components:
           example: "dappsteros"
         icon:
           type: string
-          example: "https://raw.githubusercontent.com/dappster-io/logo/main/dappsteros/dappsteros_logo_64px.png"
+          example: "https://raw.githubusercontent.com/dappsteros-io/logo/main/dappsteros/dappsteros_logo_64px.png"
         image:
           type: string
           example: "dappsteros"

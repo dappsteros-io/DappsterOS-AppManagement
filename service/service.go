@@ -14,11 +14,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/codegen/message_bus"
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/pkg/config"
-	"github.com/dappster-io/DappsterOS-Common/external"
-	"github.com/dappster-io/DappsterOS-Common/utils/logger"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/codegen/message_bus"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/pkg/config"
+	"github.com/dappsteros-io/DappsterOS-Common/external"
+	"github.com/dappsteros-io/DappsterOS-Common/utils/logger"
 	jsoniter "github.com/json-iterator/go"
 	"go.uber.org/zap"
 )

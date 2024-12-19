@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
-	"github.com/dappster-io/DappsterOS-AppManagement/model"
-	"github.com/dappster-io/DappsterOS-AppManagement/service"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/model"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/service"
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v3"
 )

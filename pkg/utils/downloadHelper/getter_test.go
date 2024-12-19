@@ -10,7 +10,7 @@ import (
 func TestDownload(t *testing.T) {
 	defer goleak.VerifyNone(t, goleak.IgnoreTopFunction("go.opencensus.io/stats/view.(*worker).start")) // https://github.com/census-instrumentation/opencensus-go/issues/1191
 
-	src := "https://github.com/dappster-io/get/archive/refs/heads/main.zip"
+	src := "https://github.com/dappsteros-io/get/archive/refs/heads/main.zip"
 
 	dst := t.TempDir()
 

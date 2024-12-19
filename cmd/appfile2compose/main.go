@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"os"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/model"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/model"
 	"gopkg.in/yaml.v3"
 )
 

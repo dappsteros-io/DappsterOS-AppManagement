@@ -3,7 +3,7 @@ package service
 import (
 	"fmt"
 
-	"github.com/dappster-io/DappsterOS-AppManagement/common"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/common"
 )
 
 var (

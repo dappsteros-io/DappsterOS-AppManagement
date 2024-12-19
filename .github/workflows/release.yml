@@ -11,7 +11,7 @@ permissions:
   contents: write
 jobs:
   call-workflow-passing-data:
-    uses: dappster-io/github/.github/workflows/go_release.yml@main
+    uses: dappsteros-io/github/.github/workflows/go_release.yml@main
     with:
       project-name: DappsterOS-AppManagement
       file-name: dappsteros-app-management

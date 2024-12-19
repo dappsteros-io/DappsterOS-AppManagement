@@ -1,7 +1,7 @@
 package v2
 
 import (
-	"github.com/dappster-io/DappsterOS-AppManagement/codegen"
+	"github.com/dappsteros-io/DappsterOS-AppManagement/codegen"
 	"github.com/labstack/echo/v4"
 )
 
